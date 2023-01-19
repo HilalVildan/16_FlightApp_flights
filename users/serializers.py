@@ -48,7 +48,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     # Override
     def validate(self, attrs):
         if attrs['password'] != attrs['password2']:
-            raise serializers.ValidationError({"message": "Passwords are not same."})
+            raise serializers.ValidationError({"message": "Passwords are not same."}) #hata verme kodu raise
         return attrs
 
     # Override
